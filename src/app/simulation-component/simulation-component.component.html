@@ -1,0 +1,16 @@
+<div class="app-container">
+  <!-- Form to input number of simulations and switch option -->
+  <form (ngSubmit)="startSimulation()">
+    <label for="numSimulations">Number of Simulations:</label>
+    <input id="numSimulations" type="number" [(ngModel)]="numSimulations" name="numSimulations" required>
+
+    <label>
+      <input type="checkbox" [(ngModel)]="switchDoor" name="switchDoor"> Switch Door
+    </label>
+
+    <button type="submit">Start Simulation</button>
+  </form>
+
+  <app-simulation-result [wins]="wins" [losses]="losses"></app-simulation-result>
+  
+</div>
